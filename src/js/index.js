@@ -12,4 +12,3 @@
         - passo 6 - remover a classe do modo-escuro do body
         - passo 7 - trocar a imagem do botão de alterar tema pra sol
 */
-alert("ola!");
