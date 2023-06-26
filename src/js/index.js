@@ -12,3 +12,12 @@
         - passo 6 - remover a classe do modo-escuro do body
         - passo 7 - trocar a imagem do botão de alterar tema pra sol
 */
+
+//1.1
+const botaoAlterarTema = document.getElementById("botao-alterar-tema");
+//1.2
+const body = document.querySelector("body");
+//1.3 e 1.4
+botaoAlterarTema.addEventListener("click", () => {
+    body.classList.add("modo-escuro");    
+});
