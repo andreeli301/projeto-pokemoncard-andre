@@ -9,15 +9,26 @@
         - passo 5 - trocar a imagem do botão de alterar tema pra lua
     
     - objetivo 2 - quando clicar no botão de troca de tema, caso o body já tenha a classe modo-escuro, remover a classe pra mudar pro modo claro e mudar a imagem pro sol
-        - passo 6 - remover a classe do modo-escuro do body
-        - passo 7 - trocar a imagem do botão de alterar tema pra sol
+        - passo 1 - verificar se o body tem a classe modo-escuro
+        - passo 2 - remover a classe do modo-escuro do body
+        - passo 3 - trocar a imagem do botão de alterar tema pra sol
 */
 
-//1.1
+
 const botaoAlterarTema = document.getElementById("botao-alterar-tema");
-//1.2
 const body = document.querySelector("body");
-//1.3 e 1.4
+const imgBotaoTrocaDeTema = document.querySelector(".imagem-botao");
+
+
 botaoAlterarTema.addEventListener("click", () => {
-    body.classList.add("modo-escuro");    
+    const modoEscuroEstaAtivo = body.classList.contains("modo-escuro")
+
+    if (modoEscuroEstaAtivo) {
+    body.classList.remove("modo-escuro");
+    imgBotaoTrocaDeTema.setAttribute("src", "./src/imagens/sun.png");
+}   
+    else {
+    body.classList.add("modo-escuro")
+    imgBotaoTrocaDeTema.setAttribute("src", "./src/imagens/moon.png")
+};
 });
